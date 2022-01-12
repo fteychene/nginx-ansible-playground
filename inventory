@@ -3,7 +3,7 @@ worker1 ansible_user=vagrant ansible_host=192.168.33.11 ansible_ssh_private_key_
 worker2 ansible_user=vagrant ansible_host=192.168.33.12 ansible_ssh_private_key_file='.vagrant/machines/worker2/virtualbox/private_key'
 
 [web]
-kubemaster
+loadbalancer
 
 [application]
 worker1
