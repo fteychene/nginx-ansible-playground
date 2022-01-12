@@ -2,14 +2,14 @@
 
 Welcome to this playground to install [Nginx](https://www.nginx.com/) and configure routing to an application using [Ansible](https://docs.ansible.com/ansible/latest/index.html).
 
-This playground provide a setup for 3 VM using [Vagrant](https://www.vagrantup.com/), one for nginx to be sued as loadbalancer and 2 for application deployment.
+This playground provide a setup for 3 VM using [Vagrant](https://www.vagrantup.com/), one for nginx to be used as loadbalancer and 2 for application deployment.
 
 This repository already define a playbook with :
  - Nginx installed
- - Application installation adn startup
- - A default site enabled on Nginx
+ - Application installation and startup
+ - A default site enabled on Nginx on domain (192.168.33.10)
 
-Provided :
+Here is a schema of what is provided :
 
 ![schema](images/start.svg)
 
@@ -60,5 +60,7 @@ server {
 
 Goal :  
 ![goal schema](images/goal.svg)
+
+Explore the existing configuration to find how to create the missing tasks in [app/routing](roles/app/routing) role and configure it in [main playbook](main.yaml) 
 
 *Have fun !*
