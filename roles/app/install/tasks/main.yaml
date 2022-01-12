@@ -1,0 +1,20 @@
+- include: docker.yaml
+
+- name: Install requirements for docker ansible
+  pip:
+    name:
+      - docker
+
+- name: Pull application image
+  community.docker.docker_image:
+    name: containous/whoami
+    source: pull
+
+- name: Run application
+  community.docker.docker_container:
+    name: application
+    image: containous/whoami
+    state: started
+    restart_policy: always
+    ports:
+     - "80:80"

@@ -1,0 +1,13 @@
+# Nginx configuration for multiple remote servers for one server
+#
+# upstream application {
+#     server <ip worker1>;
+#     server <ip worker2>;
+# }
+# server {
+#     ...
+#     location / {
+#         proxy_pass http://application;
+#     }
+# }
+#
